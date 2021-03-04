@@ -4,3 +4,7 @@ This crate is just the waker set from [async_std::sync::waker_set](https://githu
 
 If upstream updates, please file an issue or PR here. All other issues and PRs should go to async-std.
 
+# See also:
+
+* [waitlist](https://github.com/tmccombs/waitlist), with different performance tradeoffs
+
