@@ -6,6 +6,9 @@ edition = "2018"
 description = "waker set"
 license = "Apache-2.0/MIT"
 
+[features]
+unstable = []
+
 [dependencies]
 slab = "0.4.2"
 crossbeam-utils = "0.8.1"
