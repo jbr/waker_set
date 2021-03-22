@@ -46,6 +46,12 @@ pub struct WakerSet {
     inner: UnsafeCell<Inner>,
 }
 
+// safety(jbr): WakerSet implements its own atomic locking mechanism
+// around the inner UnsafeCell, so I believe the public interface is
+// Send + Sync
+unsafe impl Send for WakerSet {}
+unsafe impl Sync for WakerSet {}
+
 impl WakerSet {
     /// Creates a new `WakerSet`.
     #[inline]
